@@ -14,7 +14,7 @@ export class LugarService {
   constructor(private http: HttpClient) { }
 
   findAll():Observable<Lugar[]> {
-    const url = `${this.baseUrl/busca_lugar}`
+    const url = `${this.baseUrl}/busca_lugar`
     return this.http.get<Lugar[]>(url)
     
   }

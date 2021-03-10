@@ -11,14 +11,14 @@ export class LugarReadComponent implements OnInit {
 
   lugares: Lugar[] = []
 
-  displayedColumns: string[] = ['id', 'nome', 'capacidade', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'capacidade', 'eventos', 'acoes'];
 
   constructor(private service: LugarService) { }
 
   ngOnInit(): void {
     this.findAll();
   }
-  
+
   findAll() {
     this.service.findAll().subscribe(resposta => {
       this.lugares = resposta;
