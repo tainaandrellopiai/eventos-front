@@ -30,4 +30,8 @@ export class LugarCreateComponent implements OnInit {
       }
     })
   }
+
+  cancel(): void {
+    this.router.navigate(['lugares'])
+  }
 }
