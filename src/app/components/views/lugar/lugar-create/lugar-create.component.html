@@ -1,0 +1,17 @@
+<form>
+    <h1>CRIANDO NOVO LUGAR</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="lugar.nome" type="text" name="nome" placeholder="Ex. Praça">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Capacidade</mat-label>
+        <textarea matInput [(ngModel)]="lugar.capacidade" type="number" name="capacidade" placeholder="Ex. 1000"></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" class="mat-elevation-z8" mat-stroked-button color="primary">CRIAR</button>
+        <button class="mat-elevation-z8" mat-stroked-button color="warm">CANCELAR</button>
+    </div>
+</form>

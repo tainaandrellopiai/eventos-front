@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LugarService } from '../lugar.service';
 import { Lugar } from './lugar.model';
 
@@ -13,7 +14,7 @@ export class LugarReadComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'nome', 'capacidade', 'eventos', 'acoes'];
 
-  constructor(private service: LugarService) { }
+  constructor(private service: LugarService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -23,6 +24,10 @@ export class LugarReadComponent implements OnInit {
     this.service.findAll().subscribe(resposta => {
       this.lugares = resposta;
     })
+  }
+
+  navegarParaLugarCreate() {
+    this.router.navigate(["lugares/create"])
   }
 
 }

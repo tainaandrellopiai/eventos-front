@@ -3,7 +3,7 @@
         <h1>Lugar</h1>
     </div>
 
-    <button class="mat-elevation-z8" mat-stroked-button color="primary">NOVO LOCAL</button>
+    <button class="mat-elevation-z8" (click)="navegarParaLugarCreate()" mat-stroked-button color="primary">NOVO LOCAL</button>
 
     <div class="mat-elevation-z8 content-table">
         <table class="table" mat-table [dataSource]="lugares">

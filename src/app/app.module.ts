@@ -17,6 +17,11 @@ import { MatCardModule } from '@angular/material/card';
 import { LugarReadComponent } from './components/views/lugar/lugar-read/lugar-read.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { LugarCreateComponent } from './components/views/lugar/lugar-create/lugar-create.component';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    LugarReadComponent
+    LugarReadComponent,
+    LugarCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]
