@@ -21,9 +21,19 @@ export class LugarService {
     
   }
 
+  findById(id: String): Observable<Lugar> {
+    const url = `${this.baseUrl}/lugares/${id}`
+    return this.http.get<Lugar>(url)
+  }
+
   create(lugar: Lugar): Observable<Lugar>{
     const url = `${this.baseUrl}/lugares`
     return this.http.post<Lugar>(url, lugar);
+  }
+
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}/lugares/${id}`
+    return this.http.delete<void>(url)
   }
 
   mensagem(str: String): void {

@@ -26,7 +26,7 @@ export class LugarCreateComponent implements OnInit {
       this.service.mensagem('Lugar criado com sucesso!');
     }, err => {
       for(let i = 0; i < err.error.errors.length; i++) {
-        this.service.mensagem(err.error.errors[i].message)
+        this.service.mensagem(err.error.errors[i].message) //ver o back
       }
     })
   }
