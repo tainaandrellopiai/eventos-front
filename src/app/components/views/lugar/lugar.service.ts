@@ -44,4 +44,9 @@ export class LugarService {
     })
 
   }
+
+  update(lugar: Lugar): Observable<void> {
+    const url = `${this.baseUrl}/lugares/${lugar.id}`
+    return this.http.put<void>(url, lugar)
+  }
 }

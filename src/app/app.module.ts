@@ -23,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LugarDeleteComponent } from './components/views/lugar/lugar-delete/lugar-delete.component';
+import { LugarUpdateComponent } from './components/views/lugar/lugar-update/lugar-update.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LugarDeleteComponent } from './components/views/lugar/lugar-delete/luga
     HomeComponent,
     LugarReadComponent,
     LugarCreateComponent,
-    LugarDeleteComponent
+    LugarDeleteComponent,
+    LugarUpdateComponent
   ],
   imports: [
     BrowserModule,

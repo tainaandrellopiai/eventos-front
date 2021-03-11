@@ -1,0 +1,17 @@
+<form>
+    <h1>ATUALIZANDO LUGAR</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="lugar.nome" type="text" name="nome" placeholder="Ex. Praça">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Capacidade</mat-label>
+        <input matInput [(ngModel)]="lugar.capacidade" type="number" name="capacidade" placeholder="Ex. 1000">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button  (click)="update()" class="mat-elevation-z8" mat-stroked-button color="primary">ATUALIZAR</button>
+        <button  (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warm">CANCELAR</button>
+    </div>
+</form>
