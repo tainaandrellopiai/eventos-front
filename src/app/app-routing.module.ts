@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EventoReadAllComponent } from './components/views/evento/evento-read-all/evento-read-all.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { LugarCreateComponent } from './components/views/lugar/lugar-create/lugar-create.component';
 import { LugarDeleteComponent } from './components/views/lugar/lugar-delete/lugar-delete.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'lugares/update/:id',
     component: LugarUpdateComponent
+  },
+  {
+    path: 'lugares/:id_lugar/eventos',
+    component: EventoReadAllComponent
   }
 ];
 

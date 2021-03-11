@@ -1,12 +1,13 @@
 <div class="content">
     <div class="title">
-        <h1>LUGARES</h1>
+        <h1>EVENTOS</h1>
     </div>
 
-    <button class="mat-elevation-z8" (click)="navegarParaLugarCreate()" mat-stroked-button color="primary">NOVO LOCAL</button>
+    <button class="mat-elevation-z8"  mat-stroked-button color="primary">NOVO EVENTO</button>
 
     <div class="mat-elevation-z8 content-table">
-        <table class="table" mat-table [dataSource]="lugares">
+        <table class="table" mat-table [dataSource]="eventos" >
+
 
             <!-- Position Column -->
             <ng-container matColumnDef="id">
@@ -19,30 +20,15 @@
               <th mat-header-cell *matHeaderCellDef mat-sort-header> NOME </th>
               <td mat-cell *matCellDef="let row"> {{ row.nome }} </td>
             </ng-container>
-          
-            <!-- Weight Column -->
-            <ng-container matColumnDef="capacidade">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header> CAPACIDADE </th>
-              <td mat-cell *matCellDef="let row"> {{ row.capacidade }} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="eventos">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> EVENTOS </th>
-                <td mat-cell *matCellDef="let row">
-                   <a class="eventos" routerLink="{{ row.id }}/eventos">
-                    <i class="material-icons">event_note</i>
-                   </a>
-                </td>
-              </ng-container>            
-          
+                   
             <!-- Symbol Column -->
             <ng-container matColumnDef="acoes">
               <th class="mat-header" mat-header-cell *matHeaderCellDef mat-sort-header> AÇÕES </th>
-              <td mat-cell *matCellDef="let row"> 
-                  <a class="edit" routerLink="update/{{ row.id }} ">
+              <td mat-cell *matCellDef="let row"> {{ row.acoes }} 
+                  <a class="edit" href="#">
                       <i class="material-icons">edit</i>
                   </a>
-                  <a class="delete" routerLink="delete/{{ row.id }}">
+                  <a class="delete" href="#">
                     <i class="material-icons">delete</i>
                 </a>
               </td>

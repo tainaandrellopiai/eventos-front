@@ -24,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LugarDeleteComponent } from './components/views/lugar/lugar-delete/lugar-delete.component';
 import { LugarUpdateComponent } from './components/views/lugar/lugar-update/lugar-update.component';
+import { EventoReadAllComponent } from './components/views/evento/evento-read-all/evento-read-all.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LugarUpdateComponent } from './components/views/lugar/lugar-update/luga
     LugarReadComponent,
     LugarCreateComponent,
     LugarDeleteComponent,
-    LugarUpdateComponent
+    LugarUpdateComponent,
+    EventoReadAllComponent
   ],
   imports: [
     BrowserModule,
