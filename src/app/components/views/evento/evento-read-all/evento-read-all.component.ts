@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Evento } from '../evento.model';
 import { EventoService } from '../evento.service';
 
@@ -11,13 +11,13 @@ import { EventoService } from '../evento.service';
 export class EventoReadAllComponent implements OnInit {
 
 
-  displayedColumns: string[] = ['id', 'nome', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'tipo', 'acoes'];
 
   id_lugar: String = ''
 
   eventos: Evento[] = []
 
-  constructor(private service: EventoService, private route: ActivatedRoute) { }
+  constructor(private service: EventoService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.id_lugar = this.route.snapshot.paramMap.get('id_lugar')!;
@@ -29,7 +29,10 @@ export class EventoReadAllComponent implements OnInit {
       this.eventos = resposta;
       console.log(this.eventos);
     })
+  }
 
+  navegarParaCriarEvento(): void {
+    this.router.navigate([`lugares/${this.id_lugar}/eventos/create`])
   }
 
 }
