@@ -34,6 +34,12 @@ export class EventoService {
     return this.http.post<Evento[]>(url, evento)
   }
 
+  
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}/eventos/${id}`
+    return this.http.delete<void>(url)
+  }
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'OK', {
       horizontalPosition: 'end',

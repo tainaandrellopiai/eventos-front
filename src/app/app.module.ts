@@ -27,6 +27,7 @@ import { LugarUpdateComponent } from './components/views/lugar/lugar-update/luga
 import { EventoReadAllComponent } from './components/views/evento/evento-read-all/evento-read-all.component';
 import { EventoCreateComponent } from './components/views/evento/evento-create/evento-create.component';
 import { EventoUpdateComponent } from './components/views/evento/evento-update/evento-update.component';
+import { EventoDeleteComponent } from './components/views/evento/evento-delete/evento-delete.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { EventoUpdateComponent } from './components/views/evento/evento-update/e
     LugarUpdateComponent,
     EventoReadAllComponent,
     EventoCreateComponent,
-    EventoUpdateComponent
+    EventoUpdateComponent,
+    EventoDeleteComponent
   ],
   imports: [
     BrowserModule,

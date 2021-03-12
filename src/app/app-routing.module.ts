@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EventoCreateComponent } from './components/views/evento/evento-create/evento-create.component';
+import { EventoDeleteComponent } from './components/views/evento/evento-delete/evento-delete.component';
 import { EventoReadAllComponent } from './components/views/evento/evento-read-all/evento-read-all.component';
 import { EventoUpdateComponent } from './components/views/evento/evento-update/evento-update.component';
 import { HomeComponent } from './components/views/home/home.component';
@@ -39,8 +40,12 @@ const routes: Routes = [
     component: EventoCreateComponent
   },
   {
-    path: 'lugares/:id_cat/eventos/:id/update',
+    path: 'lugares/:id_lugar/eventos/:id/update',
     component: EventoUpdateComponent
+  },
+  {
+    path: 'lugares/:id_lugar/eventos/:id/delete',
+    component: EventoDeleteComponent
   }
 ];
 
